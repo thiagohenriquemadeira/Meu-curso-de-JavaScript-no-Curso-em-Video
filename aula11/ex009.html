@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolado Brasileiro</title>
+    <style>
+        body{
+            background-color: rgb(22, 218, 32);
+            font:normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+     <h1>Em qual pais você vive?</h1>
+     <input type="text" name="pat" id="pat">
+     <input type="button" value="analisar" onclick="analisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function analisar() {
+        var paiss = window.document.querySelector("input#pat")
+        var res =  window.document.querySelector("div#res")
+        var pais = String (paiss.value)
+        res.innerHTML= `<p>Vivendo no ${pais}</p>`
+        if (pais == 'Brasil'){
+        res.innerHTML +='<p>Você é Brasileiro</p>'        
+        }
+        else{
+            res.innerHTML +=`<p>Você é estrangeiro</p>`
+        }
+        }
+    </script> 
+</body>
+</html>
